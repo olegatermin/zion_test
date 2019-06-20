@@ -16,14 +16,23 @@ class VideoController extends Controller
         ]);
         
         $user = User::where('name', $input['username'])->first();
-        return $user->videos->sum('size');
+
+        return [
+            'status' => 'success',
+            'data' => [
+                'total_size' => $user->videos->sum('size')
+            ]
+        ];
     }
 
     public function show(Request $request, $id)
     {
         $video = Video::findOrFail($id);
 
-        return $video;
+        return [
+            'status' => 'success',
+            'data' => $video
+        ];
     }
 
     public function update(Request $request, $id)
@@ -34,8 +43,11 @@ class VideoController extends Controller
         ]);
 
         $video = Video::findOrFail($id);
-        $video->update($request->all());
+        $video->update($input);
 
-        return $video;
+        return [
+            'status' => 'success',
+            'data' => $video
+        ];
     }
 }

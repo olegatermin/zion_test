@@ -26,49 +26,49 @@ class TestSeeder extends Seeder
             'name' => 'User3'
         ]);
 
-        $video1 = Video::create([
+        Video::create([
             'id' => 'Video1',
             'size' => 120,
             'viewers' => 1100,
             'created_by' => $user1->id
         ]);
 
-        $video2 = Video::create([
+        Video::create([
             'id' => 'Video2',
             'size' => 80,
             'viewers' => 2000,
             'created_by' => $user1->id
         ]);
 
-        $video3 = Video::create([
+        Video::create([
             'id' => 'Video3',
             'size' => 250,
             'viewers' => 900,
             'created_by' => $user1->id
         ]);
 
-        $video4 = Video::create([
+        Video::create([
             'id' => 'Video4',
             'size' => 90,
             'viewers' => 600,
             'created_by' => $user2->id
         ]);
 
-        $video5 = Video::create([
+        Video::create([
             'id' => 'Video5',
             'size' => 75,
             'viewers' => 700,
             'created_by' => $user2->id
         ]);
 
-        $video6 = Video::create([
+        Video::create([
             'id' => 'Video6',
             'size' => 300,
             'viewers' => 3000,
             'created_by' => $user2->id
         ]);
 
-        $video7 = Video::create([
+        Video::create([
             'id' => 'Video7',
             'size' => 200,
             'viewers' => 2200,
